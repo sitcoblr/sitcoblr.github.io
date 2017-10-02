@@ -10,11 +10,13 @@
 	<title>sitco</title>
 
 <style type="text/css" media="screen">
+body {margin:0;padding:0;}
 
-.skew {transform: skew(-20deg);width: 70%;height: 40px; background-color: grey;float:right; margin:4px -6px 0 0;}
-.skew2 {transform: skew(-20deg);width: 30%;height: 40px; background-color: red;float:left; margin-left:-6px;}
+
+.skew {transform: skew(-20deg);width: 70%;height: 40px; background-color: grey;float:right; margin:4px -10px 0 0; border-radius:5px; border-left:10px solid brown;border-top:3px solid brown;}
+.skew2 {transform: skew(-20deg);width: 30%;height: 40px; background-color: red;float:left; margin-left:-10px;border-radius:5px;border-right:3px solid brown;border-bottom:2px solid brown;}
 .bg {background-color:;overflow:hidden;margin-top:0;}
-
+.skewadd {width:10%;}
 
 .nav {margin-top:-40px; position:relative;font-size:0;}
 .nav ul {list-style-type:none; margin:auto;width:300px;}
@@ -23,11 +25,16 @@
 .nav a {text-decoration:none;padding:11px;display:block; font-size:16px;color:white;}
 .nav a:hover {background-color:orange;}
 @media only screen and (max-width:768px) {
-.nav {display:none;}
+.nav {display:none;width:260px;overflow:hidden;}
 .nav li {display:inline;}
 .nav a {background-color:orange;}
-.navbar:hover ~ .nav {display:block;}
+.navshow {display:block;position:absolute;}
+
 }
+
+.container{margin-top:20px;}
+.skewer1 {transform: skew(-20deg);width: 70%;height: 300px; background-color: black;right:0px; margin:30px -60px 0 0; border-radius:5px;position:absolute;z-index:-1;}
+.skewer2 {transform: skew(-20deg);width: 50%;height: 250px; background-color:brown;float:left; margin-left:-60px;border-radius:5px;border-right:3px solid brown;border-bottom:2px solid brown;}
 
 
 
@@ -38,13 +45,13 @@
 
 <body>
 <h1>SITCO BANGALORE</h1>
-<div class="navbar">ass</div>
+<button onclick="button()" class="navbar xs-visible">menu</button>
 
 <div class="bg">
-<div class="skew"></div>
-<div class="skew2"></div>
+<div id="navbar" class="skew"></div>
+<div id="navbarr" class="skew2"></div>
 </div>
-<div class="nav">
+<div id="navshow" class="nav">
 <ul>
 
 <li><a href="index.html">Home</a></li>
@@ -55,13 +62,33 @@
 </ul>
 </div>
 
+<div class="container">
+<div id="block1a" class="skewer1"></div>
+<div id="block1b" class="skewer2"></div>
+
+</div>
+
+
 <br><br>
 
 
 
 
 <script>
+var press=0;
+function button() {
+if (press == 1){console.log("1");press=0;
+document.getElementById('navbar').classList.remove('skewadd');
+document.getElementById('navbarr').classList.remove('skewadd');
+document.getElementById('navshow').classList.remove('navshow');
+}
+else {console.log("2");press=1;
+document.getElementById('navbar').classList.add('skewadd');
+document.getElementById('navbarr').classList.add('skewadd');
+document.getElementById('navshow').classList.add('navshow');
+}
 
+}
 
 </script>
 </body>
