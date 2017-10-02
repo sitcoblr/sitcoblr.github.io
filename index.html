@@ -11,15 +11,51 @@
 
 <style type="text/css" media="screen">
 
+.skew {transform: skew(-20deg);width: 70%;height: 40px; background-color: grey;float:right; margin:4px -6px 0 0;}
+.skew2 {transform: skew(-20deg);width: 30%;height: 40px; background-color: red;float:left; margin-left:-6px;}
+.bg {background-color:;overflow:hidden;margin-top:0;}
+
+
+.nav {margin-top:-40px; position:relative;font-size:0;}
+.nav ul {list-style-type:none; margin:auto;width:300px;}
+.nav div {}
+.nav li {display:inline-block;margin:0;padding:0;}
+.nav a {text-decoration:none;padding:11px;display:block; font-size:16px;color:white;}
+.nav a:hover {background-color:orange;}
+@media only screen and (max-width:768px) {
+.nav {display:none;}
+.nav li {display:inline;}
+.nav a {background-color:orange;}
+.navbar:hover ~ .nav {display:block;}
+}
+
+
+
 </style>
 
 </head>
 
 
 <body>
-SITCO BANGALORE
+<h1>SITCO BANGALORE</h1>
+<div class="navbar">ass</div>
 
+<div class="bg">
+<div class="skew"></div>
+<div class="skew2"></div>
+</div>
+<div class="nav">
+<ul>
 
+<li><a href="index.html">Home</a></li>
+<li><a href="about-us.html">About-us</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</div>
+
+<br><br>
 
 
 
