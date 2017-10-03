@@ -13,7 +13,7 @@
 body {margin:0;padding:0;}
 
 
-.skew {transform: skew(-20deg);width: 70%;height: 40px; background-color: grey;float:right; margin:4px -10px 0 0; border-radius:5px; border-left:10px solid brown;border-top:3px solid brown;transition:width 1s;}
+.skew {transform: skew(-20deg);width: 70%;height: 40px; background-color: grey;float:right; margin:4px -10px 0 0; border-radius:5px; border-left:10px solid brown;border-top:3px solid brown;transition:width .5s;}
 .skew2 {transform: skew(-20deg);width: 30%;height: 40px; background-color: red;float:left; margin-left:-10px;border-radius:5px;border-right:3px solid brown;border-bottom:2px solid brown;transition:width 1s;}
 .bg {background-color:;overflow:hidden;margin-top:0;}
 .skewadd {width:10%;}
@@ -25,20 +25,19 @@ body {margin:0;padding:0;}
 .nav a {text-decoration:none;padding:11px;display:block; font-size:16px;color:white;}
 .nav a:hover {background-color:orange;}
 @media only screen and (max-width:768px) {
-.nav {width:260px;overflow:hidden;}
-.nav {margin-left:-100px; transition:2s;}
+.nav {display:;  position: absolute; margin-left:-400px;overflow:hidden;transition: 1s;}
 .nav li {display:inline;}
 .nav a {background-color:orange;}
-.navshow {margin-left:auto;}
+.navshow {display:;margin-left: 0;}
 
 }
 
 h1 {text-align:center;}
 .contain {position:relative;border:;overflow:hidden;height:600px;}
 
-.containleft {border:;padding:0;border-spacing:0;position:absolute;}
+.containleft {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;}
 
-.blockl {height:;width:500px;background-color:red;}
+.blockl {height:;width:100%;background-color:red;}
 .trileft {width:0px;height:0px;background-color:transparent;
 border-top:200px solid red;
 border-right:100px solid transparent;
@@ -46,9 +45,9 @@ border-bottom:200px solid transparent;
 border-left:100px solid red;
 }
 
-.containright {border:;padding:0;border-spacing:0;position:absolute;right:0;top:30px;}
+.containright {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;right:0;top:30px;z-index: -1;}
 
-.blockr {height:;width:600px;background-color:black;}
+.blockr {height:;width:100%;background-color:black;}
 .triright {width:0px;height:0px;background-color:transparent;
 border-top:200px solid transparent;
 border-right:100px solid black;
