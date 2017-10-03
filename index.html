@@ -174,17 +174,17 @@ document.getElementById('navshow').classList.add('navshow');
 var slide = 1;
 console.log(slide);
 
+function nextSlide() {
+	if (slide < 4){
 
-	for (slide < 4){
-		setTimeout(function () {
 		document.getElementById('slide'+slide).classList.remove('show');
 		slide++;
 		if(slide == 4){slide = 1;}
 		console.log(slide);
 		document.getElementById('slide'+slide).classList.add('show');
-		}, 2000);
-	}
 
+	}
+}
 
 
 </script>
