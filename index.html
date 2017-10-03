@@ -120,26 +120,29 @@ aslkdfhj<br>
 <tr>
 <td class="triright xs-hidden"></td>
 <td class="blockr">
-<div id="slide1" class="slide1"><h1>Heading 1</h1>
-<p>aslkdfhjaslkdfhj
-aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br></p>
+<div id="slide1" class="slide1 show">
+	<h1>Heading 1</h1>
+	<p>aslkdfhjaslkdfhj
+	aslkdfhj<br>
+	aslkdfhj<br>
+	aslkdfhj<br>
+	aslkdfhj<br></p>
 </div>
-<div id="slide2" class="slide2"><h1>Heading 2</h1>
-<p>aslkdfhjaslkdfhj
-aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br></p>
+<div id="slide2" class="slide2">
+	<h1>Heading 2</h1>
+	<p>aslkdfhjaslkdfhj
+	aslkdfhj<br>
+	aslkdfhj<br>
+	aslkdfhj<br>
+	aslkdfhj<br></p>
 </div>
-<div id="slide3" class="slide3"><h1>Heading 2</h1>
-<p>aslkdfhjaslkdfhj
-aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br></p>
+<div id="slide3" class="slide3">
+	<h1>Heading 3</h1>
+	<p>aslkdfhjaslkdfhj
+	aslkdfhj<br>
+	aslkdfhj<br>
+	aslkdfhj<br>
+	aslkdfhj<br></p>
 </div>
 </td>
 </tr>
@@ -147,7 +150,7 @@ aslkdfhj<br></p>
 
 </div>
   <br>
-<button onclick="nextslide()">click</button>
+<button onclick="nextSlide()">click</button>
   
   
   
@@ -169,21 +172,20 @@ document.getElementById('navshow').classList.add('navshow');
 }
 
 var slide = 1;
-function nextslide() {
-if (slide == 1){
 console.log(slide);
-document.getElementById('slide'+slide).classList.add('show');
-slide++;
-}
-else {
-if(slide > 3){slide = 1;}console.log(slide);
 
-document.getElementById('slide1').classList.remove('show');
-document.getElementById('slide1').classList.add('show');
 
-slide++;
-}
-}
+	for (slide < 4){
+		setTimeout(function () {
+		document.getElementById('slide'+slide).classList.remove('show');
+		slide++;
+		if(slide == 4){slide = 1;}
+		console.log(slide);
+		document.getElementById('slide'+slide).classList.add('show');
+		}, 2000);
+	}
+
+
 
 </script>
 </body>
