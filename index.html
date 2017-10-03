@@ -22,7 +22,7 @@ body {margin:0;padding:0;}
 .nav ul {list-style-type:none; margin:auto;width:300px;}
 .nav div {}
 .nav li {display:inline-block;margin:0;padding:0;}
-.nav a {text-decoration:none;padding:11px;display:block; font-size:16px;color:white;}
+.nav a {text-decoration:none;padding:10px;display:block; font-size:18px;color:white;}
 .nav a:hover {background-color:orange;}
 @media only screen and (max-width:768px) {
 .nav {display:;  position: absolute; margin-left:-400px;overflow:hidden;transition: 1s;}
@@ -37,7 +37,7 @@ h1 {text-align:center;}
 
 .containleft {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;}
 
-.blockl {height:;width:100%;background-color:red;}
+.blockl {height:;width:100%;background-color:red;color:white;}
 .trileft {width:0px;height:0px;background-color:transparent;
 border-top:200px solid red;
 border-right:100px solid transparent;
@@ -47,7 +47,7 @@ border-left:100px solid red;
 
 .containright {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;right:0;top:30px;z-index: -1;}
 
-.blockr {height:;width:100%;background-color:black;}
+.blockr {height:;width:100%;background-color:black;color:white;}
 .triright {width:0px;height:0px;background-color:transparent;
 border-top:200px solid transparent;
 border-right:100px solid black;
@@ -55,12 +55,18 @@ border-bottom:200px solid black;
 border-left:100px solid transparent;
 }
 
+.blockr p , .blockl p {text-align:center;}
+.blockr div , .blockl div {background-color:orange; transform: skew(-30deg);margin-left:-50px;width:100%;overflow:hidden;}
+.blockr h1 , .blockl h1 {color:black; text-align:right;transform: skew(30deg);}
+
 @media only screen and (max-width:768px) {
 .contain {height:auto;position:static;}
-.containright {position:static;min-height:100px;}
-.containleft {position:static;min-height:100px;}
+.containright {position:static;min-height:100px;width:100%;}
+.containleft {position:static;min-height:100px;width:100%;}
 }
 
+.slide1, .slide2, .slide3 {display:none;}
+.show {display:block;}
 
 </style>
 
@@ -95,7 +101,17 @@ border-left:100px solid transparent;
   
 <table class="containleft">
 <tr>
-<td class="blockl"></td>
+<td class="blockl">
+<div><h1>Heading 1</h1></div>
+<p>asdfgasdgdfaslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br>aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br>
+</p>
+</td>
 <td class="trileft xs-hidden"></td>
 </tr>
 </table>
@@ -103,13 +119,40 @@ border-left:100px solid transparent;
 <table class="containright">
 <tr>
 <td class="triright xs-hidden"></td>
-<td class="blockr"></td>
+<td class="blockr">
+<div id="slide1" class="slide1"><h1>Heading 1</h1>
+<p>aslkdfhjaslkdfhj
+aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br></p>
+</div>
+<div id="slide2" class="slide2"><h1>Heading 2</h1>
+<p>aslkdfhjaslkdfhj
+aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br></p>
+</div>
+<div id="slide3" class="slide3"><h1>Heading 2</h1>
+<p>aslkdfhjaslkdfhj
+aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br>
+aslkdfhj<br></p>
+</div>
+</td>
 </tr>
 </table>
 
 </div>
   <br>
-
+<button onclick="nextslide()">click</button>
+  
+  
+  
+  
+  
 <script>
 var press=0;
 function button() {
@@ -123,7 +166,23 @@ document.getElementById('navbar').classList.add('skewadd');
 document.getElementById('navbarr').classList.add('skewadd');
 document.getElementById('navshow').classList.add('navshow');
 }
+}
 
+var slide = 1;
+function nextslide() {
+if (slide == 1){
+console.log(slide);
+document.getElementById('slide'+slide).classList.add('show');
+slide++;
+}
+else {
+if(slide > 3){slide = 1;}console.log(slide);
+
+document.getElementById('slide1').classList.remove('show');
+document.getElementById('slide1').classList.add('show');
+
+slide++;
+}
 }
 
 </script>
