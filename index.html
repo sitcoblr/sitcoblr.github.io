@@ -18,7 +18,7 @@ body {margin:0;padding:0;}
 .bg {background-color:;overflow:hidden;margin-top:0;}
 .skewadd {width:10%;}
 
-.nav {margin-top:-40px; position:relative;font-size:0;}
+.nav {margin-top:-40px; position:relative;font-size:0;z-index:99;}
 .nav ul {list-style-type:none; margin:auto;width:300px;}
 .nav div {}
 .nav li {display:inline-block;margin:0;padding:0;}
@@ -33,7 +33,11 @@ body {margin:0;padding:0;}
 }
 
 h1 {text-align:center;}
+
+/* -*-SLIDE CONTAINER-*- */
 .contain {position:relative;border:;overflow:hidden;height:600px;}
+
+/*LEFT*/
 
 .containleft {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;}
 
@@ -44,6 +48,13 @@ border-right:100px solid transparent;
 border-bottom:200px solid transparent;
 border-left:100px solid red;
 }
+.blockl p {text-align:center;transform: skew(30deg);background-color:black;}
+
+.blockl div {transform: skew(-30deg);margin-left:-70px; width:90%; overflow:hidden; float:right;}
+.blockl h1 {color:black; text-align:right;transform: skew(30deg);text-align:left;padding-left:30px; background-color:black;color:white;}
+
+
+/*RIGHT*/
 
 .containright {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;right:0;top:30px;z-index: -1;}
 
@@ -55,9 +66,9 @@ border-bottom:200px solid black;
 border-left:100px solid transparent;
 }
 
-.blockr p , .blockl p {text-align:center;}
-.blockr div , .blockl div {background-color:orange; transform: skew(-30deg);margin-left:-50px;width:100%;overflow:hidden;}
-.blockr h1 , .blockl h1 {color:black; text-align:right;transform: skew(30deg);}
+.blockr p {text-align:center;transform: skew(30deg);background-color:red;}
+.blockr h1 {color:black; text-align:right;transform: skew(30deg);text-align:left;padding-left:30px; background-color:red;}
+.blockr div {transform: skew(-30deg);margin-right:-70px; width:90%; overflow:hidden; float:right;}
 
 @media only screen and (max-width:768px) {
 .contain {height:auto;position:static;}
@@ -65,8 +76,10 @@ border-left:100px solid transparent;
 .containleft {position:static;min-height:100px;width:100%;}
 }
 
-.slide1, .slide2, .slide3 {display:none;}
+
+.slide1, .slide2, .slide3 {display:none; height:300px;}
 .show {display:block;}
+
 
 </style>
 
@@ -76,11 +89,10 @@ border-left:100px solid transparent;
 <body>
 
 <h1>SITCO BANGALORE</h1>
-<button onclick="button()" class="navbar xs-visible">menu</button>
 
 <div class="bg">
 <div id="navbar" class="skew"></div>
-<div id="navbarr" class="skew2"></div>
+<div id="navbarr" class="skew2"><div onclick="button()" class="navbar xs-visible">click</div></div>
 </div>
 <div id="navshow" class="nav">
 <ul>
@@ -102,15 +114,21 @@ border-left:100px solid transparent;
 <table class="containleft">
 <tr>
 <td class="blockl">
-<div><h1>Heading 1</h1></div>
-<p>asdfgasdgdfaslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br>aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br>
-aslkdfhj<br>
-</p>
+<div id="sliderl1" class="slide1 show">
+	<h1>Heading 1</h1>
+	<p>aslkdfhjaslkdfhj	asdfgsdfhj<br>asldsfgsdkdfhj<br>aslkhgthjydfhj<br>aslkymjntdfhj<br></p>
+	<p>aslkdfhjaslkdfhjaslskdsthrfstfhj<br>aslkdfhj<br>asgsrtlkdfhj<br>aslkstrhghgdfhj<br></p>
+</div>
+<div id="sliderl2" class="slide2">
+	<h1>Heading 2</h1>
+	<p>aslkdfhjaslkdfhjaslkdfdshdfbtghtffhj<br>aslkdfhj<br>aslksrtegdfhj<br>aslkstdfhj<br></p>
+	<p>aslkdfhjaslkdfhj	asdfgsdfhj<br>asldsfgsdkdfhj<br>aslkhgthjydfhj<br>aslkymjntdfhj<br></p>
+</div>
+<div id="sliderl3" class="slide3">
+	<h1>Heading 3</h1>
+	<p>aslkdfhjaslkdfhjaslskdsthrfstfhj<br>aslkdfhj<br>asgsrtlkdfhj<br>aslkstrhghgdfhj<br></p>
+	<p>aslkdfhjaslkdfhjaslkdfdshdfbtghtffhj<br>aslkdfhj<br>aslksrtegdfhj<br>aslkstdfhj<br></p>
+</div>
 </td>
 <td class="trileft xs-hidden"></td>
 </tr>
@@ -120,29 +138,20 @@ aslkdfhj<br>
 <tr>
 <td class="triright xs-hidden"></td>
 <td class="blockr">
-<div id="slide1" class="slide1 show">
+<div id="slider1" class="slide1 show">
 	<h1>Heading 1</h1>
-	<p>aslkdfhjaslkdfhj
-	aslkdfhj<br>
-	aslkdfhj<br>
-	aslkdfhj<br>
-	aslkdfhj<br></p>
+	<p>aslkdfhjaslkdfhj	asdfgsdfhj<br>asldsfgsdkdfhj<br>aslkhgthjydfhj<br>aslkymjntdfhj<br></p>
+	<p>aslkdfhjaslkdfhjaslskdsthrfstfhj<br>aslkdfhj<br>asgsrtlkdfhj<br>aslkstrhghgdfhj<br></p>
 </div>
-<div id="slide2" class="slide2">
+<div id="slider2" class="slide2">
 	<h1>Heading 2</h1>
-	<p>aslkdfhjaslkdfhj
-	aslkdfhj<br>
-	aslkdfhj<br>
-	aslkdfhj<br>
-	aslkdfhj<br></p>
+	<p>aslkdfhjaslkdfhjaslkdfdshdfbtghtffhj<br>aslkdfhj<br>aslksrtegdfhj<br>aslkstdfhj<br></p>
+	<p>aslkdfhjaslkdfhj	asdfgsdfhj<br>asldsfgsdkdfhj<br>aslkhgthjydfhj<br>aslkymjntdfhj<br></p>
 </div>
-<div id="slide3" class="slide3">
+<div id="slider3" class="slide3">
 	<h1>Heading 3</h1>
-	<p>aslkdfhjaslkdfhj
-	aslkdfhj<br>
-	aslkdfhj<br>
-	aslkdfhj<br>
-	aslkdfhj<br></p>
+	<p>aslkdfhjaslkdfhjaslskdsthrfstfhj<br>aslkdfhj<br>asgsrtlkdfhj<br>aslkstrhghgdfhj<br></p>
+	<p>aslkdfhjaslkdfhjaslkdfdshdfbtghtffhj<br>aslkdfhj<br>aslksrtegdfhj<br>aslkstdfhj<br></p>
 </div>
 </td>
 </tr>
@@ -150,7 +159,7 @@ aslkdfhj<br>
 
 </div>
   <br>
-<button onclick="nextSlide()">click</button>
+
   
   
   
@@ -172,19 +181,19 @@ document.getElementById('navshow').classList.add('navshow');
 }
 
 var slide = 1;
-console.log(slide);
+var timer = 3000;
+setTimeout(function(){
 
-function nextSlide() {
-	if (slide < 4){
-
-		document.getElementById('slide'+slide).classList.remove('show');
+		document.getElementById('slider'+slide).classList.remove('show');
+		document.getElementById('sliderl'+slide).classList.remove('show');
 		slide++;
 		if(slide == 4){slide = 1;}
 		console.log(slide);
-		document.getElementById('slide'+slide).classList.add('show');
-
-	}
-}
+		document.getElementById('slider'+slide).classList.add('show');
+		document.getElementById('sliderl'+slide).classList.add('show');
+		
+	setTimeout(arguments.callee, timer);
+}, timer);
 
 
 </script>
