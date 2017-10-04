@@ -13,8 +13,8 @@
 body {margin:0;padding:0;}
 
 
-.skew {transform: skew(-20deg);width: 70%;height: 40px; background-color: grey;float:right; margin:4px -10px 0 0; border-radius:5px; border-left:10px solid brown;border-top:3px solid brown;transition:width .5s;}
-.skew2 {transform: skew(-20deg);width: 30%;height: 40px; background-color: red;float:left; margin-left:-10px;border-radius:5px;border-right:3px solid brown;border-bottom:2px solid brown;transition:width 1s;}
+.skew {transform: skew(-20deg);width: 70%;height: 40px; background-color: #194d19;float:right; margin:4px -10px 0 0; border-radius:5px; border-left:10px solid brown;border-top:3px solid brown;transition:width .5s;}
+.skew2 {transform: skew(-20deg);width: 30%;height: 40px; background-color: #0d260d;float:left; margin-left:-10px;border-radius:5px;border-right:3px solid brown;border-bottom:2px solid brown;transition:width 1s;}
 .bg {background-color:;overflow:hidden;margin-top:0;}
 .skewadd {width:10%;}
 
@@ -41,33 +41,33 @@ h1 {text-align:center;}
 
 .containleft {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;}
 
-.blockl {height:;width:100%;background-color:red;color:white;}
+.blockl {height:;width:100%;background-color:#194d19;color:white ;}
 .trileft {width:0px;height:0px;background-color:transparent;
-border-top:200px solid red;
+border-top:200px solid #194d19;
 border-right:100px solid transparent;
 border-bottom:200px solid transparent;
-border-left:100px solid red;
+border-left:100px solid #194d19;
 }
-.blockl p {text-align:center;transform: skew(30deg);background-color:black;}
+.blockl p {text-align:center;transform: skew(30deg);background-color:#ffaa80;color:black;}
 
 .blockl div {transform: skew(-30deg);margin-left:-70px; width:90%; overflow:hidden; float:right;}
-.blockl h1 {color:black; text-align:right;transform: skew(30deg);text-align:left;padding-left:30px; background-color:black;color:white;}
+.blockl h1 {color:black; text-align:right;transform: skew(30deg);text-align:left;padding-left:30px; background-color:#ffaa80;}
 
 
 /*RIGHT*/
 
 .containright {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;right:0;top:30px;z-index: -1;}
 
-.blockr {height:;width:100%;background-color:black;color:white;}
+.blockr {height:;width:100%;background-color:#ffaa80;color:white;}
 .triright {width:0px;height:0px;background-color:transparent;
 border-top:200px solid transparent;
-border-right:100px solid black;
-border-bottom:200px solid black;
+border-right:100px solid #ffaa80;
+border-bottom:200px solid #ffaa80;
 border-left:100px solid transparent;
 }
 
-.blockr p {text-align:center;transform: skew(30deg);background-color:red;}
-.blockr h1 {color:black; text-align:right;transform: skew(30deg);text-align:left;padding-left:30px; background-color:red;}
+.blockr p {text-align:center;transform: skew(30deg);background-color:#194d19;}
+.blockr h1 {color:; text-align:right;transform: skew(30deg);text-align:left;padding-left:30px; background-color:#194d19;}
 .blockr div {transform: skew(-30deg);margin-right:-70px; width:90%; overflow:hidden; float:right;}
 
 @media only screen and (max-width:768px) {
@@ -88,11 +88,16 @@ border-left:100px solid transparent;
 
 <body>
 
-<h1>SITCO BANGALORE</h1>
+<div class="container" style="border:0;">
+<div class="col-sm-3"><img src="logo.jpg" style="width: 100%; max-width: 250px;"></div>
+<div class="col-sm-6"><h1  style="color:#0d260d;">SOUTH INDIA TRADING COMPANY</h1></div>
+<div class="col-sm-3 xs-hidden">+91-91 080 12345</div>
+</div>
+
 
 <div class="bg">
 <div id="navbar" class="skew"></div>
-<div id="navbarr" class="skew2"><div onclick="button()" class="navbar xs-visible">click</div></div>
+<div id="navbarr" class="skew2"><div onclick="button()" class="navbar xs-visible">--click</div></div>
 </div>
 <div id="navshow" class="nav">
 <ul>
