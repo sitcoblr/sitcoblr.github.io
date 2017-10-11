@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" type="text/css" href="https://mdmsb.github.io/purecss.cs"> -->
+
+  
+
+<style>
+.slider {height:200px;width:700px;overflow:hidden;position:relative;}
+.innerslide {display:flex;position:absolute;left:0px;animation-name:smoothslide;animation-duration:5s;animation-iteration-count:infinite;animation-timing-function: linear;}
+.innerslide>img {width:200px;}
+@keyframes smoothslide{from{left:0px;}to{left:-600px;}}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="slider">
+    <div id="inner" class="innerslide">
+	<img src="logo.jpg"/>
+    <img src="logo.jpg"/>
+    <img src="logo.jpg"/>
+    <img src="logo.jpg"/>
+    <img src="logo.jpg"/>
+    <img src="logo.jpg"/>
+    <img src="logo.jpg"/>
+	</div>
+</div>
+<button onclick="switcher()">click</button>
+
+
+<script>
+var mySwitch = 1
+function switcher() {
+
+
+if (mySwitch == 1){mySwitch = 2}
+else {mySwitch = 1}
+console.log(mySwitch);
+}
+
+</script>
+
+</body>
+
+</html>

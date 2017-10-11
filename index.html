@@ -35,7 +35,7 @@ body {margin:0;padding:0;background-color:#ffedde;}
 h1 {text-align:center;}
 
 /* -*-SLIDE CONTAINER-*- */
-.contain {position:relative;border:;overflow:hidden;height:600px;}
+.contain {position:relative;border:;overflow:hidden;height:450px;margin-top:20px;}
 
 /*LEFT*/
 
@@ -79,7 +79,13 @@ border-left:100px solid transparent;
 .slide1, .slide2, .slide3 {display:none; height:300px;}
 .show {display:block;}
 
+/* smooth slider */
+.slider {height:200px;width:100%;overflow:hidden;position:relative;}
+.innerslide {display:flex;position:absolute;left:0px;animation-name:smoothslide;animation-duration:10s;animation-iteration-count:infinite;animation-timing-function: linear;}
+.innerslide>img {width:150px;height:150px;}
+@keyframes smoothslide{from{left:0px;}to{left:-1800px;}}
 
+150x12
 </style>
 
 </head>
@@ -109,29 +115,22 @@ border-left:100px solid transparent;
 </ul>
 </div>
 
-
-
-<br>
-
 <div class="contain">  
   
 <table class="containleft">
 <tr>
 <td class="blockl">
 <div id="sliderl1" class="slide1 show">
-	<h1>Heading 1</h1>
-	<p>aslkdfhjaslkdfhj	asdfgsdfhj<br>asldsfgsdkdfhj<br>aslkhgthjydfhj<br>aslkymjntdfhj<br></p>
-	<p>aslkdfhjaslkdfhjaslskdsthrfstfhj<br>aslkdfhj<br>asgsrtlkdfhj<br>aslkstrhghgdfhj<br></p>
+	<h1>AGRICULTURAL</h1>
+	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc. </p>
 </div>
 <div id="sliderl2" class="slide2">
-	<h1>Heading 2</h1>
-	<p>aslkdfhjaslkdfhjaslkdfdshdfbtghtffhj<br>aslkdfhj<br>aslksrtegdfhj<br>aslkstdfhj<br></p>
-	<p>aslkdfhjaslkdfhj	asdfgsdfhj<br>asldsfgsdkdfhj<br>aslkhgthjydfhj<br>aslkymjntdfhj<br></p>
+	<h1>HARDWARE</h1>
+	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc. </p>
 </div>
 <div id="sliderl3" class="slide3">
-	<h1>Heading 3</h1>
-	<p>aslkdfhjaslkdfhjaslskdsthrfstfhj<br>aslkdfhj<br>asgsrtlkdfhj<br>aslkstrhghgdfhj<br></p>
-	<p>aslkdfhjaslkdfhjaslkdfdshdfbtghtffhj<br>aslkdfhj<br>aslksrtegdfhj<br>aslkstdfhj<br></p>
+	<h1>AGRICULTURAL</h1>
+	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc. </p>
 </div>
 </td>
 <td class="trileft xs-hidden"></td>
@@ -143,31 +142,61 @@ border-left:100px solid transparent;
 <td class="triright xs-hidden"></td>
 <td class="blockr">
 <div id="slider1" class="slide1 show">
-	<h1>Heading 1</h1>
-	<p>aslkdfhjaslkdfhj	asdfgsdfhj<br>asldsfgsdkdfhj<br>aslkhgthjydfhj<br>aslkymjntdfhj<br></p>
-	<p>aslkdfhjaslkdfhjaslskdsthrfstfhj<br>aslkdfhj<br>asgsrtlkdfhj<br>aslkstrhghgdfhj<br></p>
+	<h1>PRODUCTS</h1>
+	<img src="img/IMG1.jpg" height="100px"width="100px"/>
+	<img src="img/IMG2.jpg" height="100px"width="100px"/>
+	<img src="img/IMG3.jpg" height="100px"width="100px"/>
+	<img src="img/IMG4.jpg" height="100px"width="100px"/>
 </div>
 <div id="slider2" class="slide2">
-	<h1>Heading 2</h1>
-	<p>aslkdfhjaslkdfhjaslkdfdshdfbtghtffhj<br>aslkdfhj<br>aslksrtegdfhj<br>aslkstdfhj<br></p>
-	<p>aslkdfhjaslkdfhj	asdfgsdfhj<br>asldsfgsdkdfhj<br>aslkhgthjydfhj<br>aslkymjntdfhj<br></p>
+	<h1>PRODUCTS</h1>
+	<img src="img/IMG5.jpg" height="100px"width="100px"/>
+	<img src="img/IMG6.jpg" height="100px"width="100px"/>
+	<img src="img/IMG7.jpg" height="100px"width="100px"/>
+	<img src="img/IMG8.jpg" height="100px"width="100px"/>
 </div>
 <div id="slider3" class="slide3">
-	<h1>Heading 3</h1>
-	<p>aslkdfhjaslkdfhjaslskdsthrfstfhj<br>aslkdfhj<br>asgsrtlkdfhj<br>aslkstrhghgdfhj<br></p>
-	<p>aslkdfhjaslkdfhjaslkdfdshdfbtghtffhj<br>aslkdfhj<br>aslksrtegdfhj<br>aslkstdfhj<br></p>
+	<h1>PRODUCTS</h1>
+	<img src="img/IMG9.jpg" height="100px"width="100px"/>
+	<img src="img/IMG10.jpg" height="100px"width="100px"/>
+	<img src="img/IMG11.jpg" height="100px"width="100px"/>
+	<img src="img/IMG12.jpg" height="100px"width="100px"/>
 </div>
 </td>
 </tr>
 </table>
 
 </div>
-  <br>
+<div class="slider">
+    <div id="inner" class="innerslide">
+	<img src="img/IMG1.jpg"/>
+	<img src="img/IMG2.jpg"/>
+	<img src="img/IMG3.jpg"/>
+	<img src="img/IMG4.jpg"/>
+	<img src="img/IMG5.jpg"/>
+	<img src="img/IMG6.jpg"/>
+	<img src="img/IMG7.jpg"/>
+	<img src="img/IMG8.jpg"/>
+	<img src="img/IMG9.jpg"/>
+	<img src="img/IMG10.jpg"/>
+	<img src="img/IMG11.jpg"/>
+	<img src="img/IMG12.jpg"/>
+	<!-- copy same as above -->
+	<img src="img/IMG1.jpg"/>
+	<img src="img/IMG2.jpg"/>
+	<img src="img/IMG3.jpg"/>
+	<img src="img/IMG4.jpg"/>
+	<img src="img/IMG5.jpg"/>
+	<img src="img/IMG6.jpg"/>
+	<img src="img/IMG7.jpg"/>
+	<img src="img/IMG8.jpg"/>
+	<img src="img/IMG9.jpg"/>
+	<img src="img/IMG10.jpg"/>
+	<img src="img/IMG11.jpg"/>
+	<img src="img/IMG12.jpg"/>	
+	</div>
+</div>
 
-  
-  
-  
-  
   
 <script>
 var press=0;
@@ -198,6 +227,9 @@ setTimeout(function(){
 		
 	setTimeout(arguments.callee, timer);
 }, timer);
+
+
+
 
 
 </script>
