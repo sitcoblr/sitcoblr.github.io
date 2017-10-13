@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="Description" content="victoryhardware.in">
+    <meta name="author" content="victoryhardware.in">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://mdmsb.github.io/purecss.css">
+
+	<title>sitco</title>
+
+<style type="text/css" media="screen">
+.border {border:1px solid;}
+body {margin:0;font-family:Lucida Sans Unicode; letter-spacing:3px;}
+
+
+
+.skew {transform: skew(-20deg);width: 70%;height: 40px; background-color: #194d19;float:right; margin:4px -10px 0 0; border-radius:5px; border-left:10px solid brown;border-top:3px solid brown;transition:width .5s;}
+.skew2 {transform: skew(-20deg);width: 30%;height: 40px; background-color: #0d260d;float:left; margin-left:-10px;border-radius:5px;border-right:3px solid brown;border-bottom:2px solid brown;transition:width 1s;}
+.bg {background-color:;overflow:hidden;margin-top:0;}
+.skewadd {width:10%;}
+
+.nav {margin-top:-40px; position:relative;font-size:0;z-index:99;}
+.nav ul {list-style-type:none; margin:auto;width:400px;padding:0;}
+.nav div {}
+.nav li {display:inline-block;margin:0;padding:0;}
+.nav a {text-decoration:none;padding:6px 7px;display:block; font-size:18px;color:white;}
+.nav a:hover {background-color:orange;}
+@media only screen and (max-width:768px) {
+.nav {display:;  position: absolute; margin-left:-400px;overflow:hidden;transition: 1s;}
+.nav li {display:inline;}
+.nav a {background-color:#aa7a51;}
+.navshow {display:;margin-left: 40px;}
+.navbar {color:#d9ae7c;}
+}
+
+
+
+
+.contain {position:relative;overflow:hidden;min-height:420px;}
+
+/* LEFT */
+.left {position:absolute;left:0;width:55%;height:400px; z-index:1; background-color:#623714;}
+.bgleft {background-image:url("img/leftt.png");background-repeat:no-repeat; height:100%; width:153px; position:absolute; right:-153px; top:0;}
+.left p, .left h1 {width:90%; padding:20px 10px; color:white; margin:auto;}
+
+/* RIGHT */
+.right {position:absolute; right:0; top:20px; width:40%; height:400px; background-color:#d9ae7c;}
+.bgright {background-image:url("img/rightt.png");background-repeat:no-repeat; height:100%; width:153px; position:absolute; left:-153px; }
+.imgcontain {padding:10px 0 0 100px;}
+
+@media only screen and (max-width:768px) {
+.left, .right {position:static;width:100%;height:100%;}
+.left p, .left h1 {width:100%;}
+.imgcontain {padding:10px;}
+
+}
+.first, .imgcontain {display:none; animation-name:anim; animation-duration:1s;}
+.show {display:block;}
+@keyframes anim {
+from{margin-left:-50px;opacity:.2;} to{margin-left:1px;opacity:1;}
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container" style="border:0;">
+<div class="col-sm-3"><img src="logo.jpg" style="width: 100%; max-width: 250px;"></div>
+<div class="col-sm-6"><h1  style="color:#0d260d;">SOUTH INDIA TRADING COMPANY</h1></div>
+<div class="col-sm-3 xs-hidden">+91-91 080 12345</div>
+</div>
+
+
+<div class="bg">
+<div id="navbar" class="skew"></div>
+<div id="navbarr" class="skew2"><div onclick="button()" class="navbar xs-visible">--click</div></div>
+</div>
+<div id="navshow" class="nav">
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about-us.html">About-us</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</div>
+
+<br>
+<div class="contain">
+<div class="left">
+	<div id="myStyle1" class="first show">
+	<h1>Agricultural Products</h1>
+	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc.</p>
+	</div>
+	<div id="myStyle2" class="first">
+	<h1>Hardware Products</h1>
+	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc.</p>
+	</div>
+
+
+<div class="bgleft"></div>
+</div>
+<div class="right">
+<div class="bgright"></div>
+	<div id="myStyles1" class="imgcontain show">
+	<img src="img/IMG1.jpg" height="100px"width="100px"/>
+	<img src="img/IMG2.jpg" height="100px"width="100px"/>
+	<img src="img/IMG3.jpg" height="100px"width="100px"/>
+	<img src="img/IMG4.jpg" height="100px"width="100px"/>
+	<img src="img/IMG5.jpg" height="100px"width="100px"/>
+	<img src="img/IMG6.jpg" height="100px"width="100px"/>
+	<img src="img/IMG7.jpg" height="100px"width="100px"/>
+	<img src="img/IMG8.jpg" height="100px"width="100px"/>
+	</div>
+	<div id="myStyles2" class="imgcontain">
+	<img src="img/IMG9.jpg" height="100px"width="100px"/>
+	<img src="img/IMG10.jpg" height="100px"width="100px"/>
+	<img src="img/IMG11.jpg" height="100px"width="100px"/>
+	<img src="img/IMG12.jpg" height="100px"width="100px"/>
+	<img src="img/IMG1.jpg" height="100px"width="100px"/>
+	<img src="img/IMG2.jpg" height="100px"width="100px"/>
+	<img src="img/IMG3.jpg" height="100px"width="100px"/>
+	<img src="img/IMG4.jpg" height="100px"width="100px"/>
+	</div>
+</div>
+</div>
+
+<button onclick="myButton()">click</button>
+
+
+<script>
+var slide = 1;
+
+var timer = 3000;
+setTimeout(function(){
+
+		document.getElementById('myStyle'+slide).classList.remove('show');
+		document.getElementById('myStyles'+slide).classList.remove('show');
+		slide++;
+		if(slide == 3){slide = 1;}
+		console.log('myStyles'+slide);
+		document.getElementById('myStyle'+slide).classList.add('show');
+		document.getElementById('myStyles'+slide).classList.add('show');
+		
+	setTimeout(arguments.callee, timer);
+}, timer);
+
+</script>
+</body>
+</html>
