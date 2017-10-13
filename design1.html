@@ -50,16 +50,25 @@ body {margin:0;font-family:Lucida Sans Unicode; letter-spacing:3px;}
 .imgcontain {padding:10px 0 0 100px;}
 
 @media only screen and (max-width:768px) {
-.left, .right {position:static;width:100%;height:100%;}
+.left, .right {position:static;width:100%;height:auto;}
 .left p, .left h1 {width:100%;}
 .imgcontain {padding:10px;}
-
+.right {height:340px;}
 }
-.first, .imgcontain {display:none; animation-name:anim; animation-duration:1s;}
+.first, .imgcontain {display:none; animation-name:anim; animation-duration:1s; height:auto; position:relative;}
 .show {display:block;}
 @keyframes anim {
-from{margin-left:-50px;opacity:.2;} to{margin-left:1px;opacity:1;}
+from{left:-50px;opacity:.2;} to{left:1px;opacity:1;}
 }
+
+/* side menu */
+.side {position:absolute; transform: rotate(-90deg); left:-190px; top:calc(50% - 10px); height:20px; width:400px; z-index:5; }
+.side div {float:left; border:1px solid; padding:0 10px;}
+.side1, .side2, .side3 {background-color:brown;}
+.side>div:hover {background-color:orange;}
+.showing {background-color:#ac7a50;}
+
+
 </style>
 
 </head>
@@ -70,8 +79,8 @@ from{margin-left:-50px;opacity:.2;} to{margin-left:1px;opacity:1;}
 
 <div class="container" style="border:0;">
 <div class="col-sm-3"><img src="logo.jpg" style="width: 100%; max-width: 250px;"></div>
-<div class="col-sm-6"><h1  style="color:#0d260d;">SOUTH INDIA TRADING COMPANY</h1></div>
-<div class="col-sm-3 xs-hidden">+91-91 080 12345</div>
+<div class="col-sm-6"><h1  style="color:#0d260d; text-align:center;">SOUTH INDIA TRADING COMPANY</h1></div>
+<div class="col-sm-3 xs-hidden"><div style="color:red;">Contact Us</div>+91-91 080 12345</div>
 </div>
 
 
@@ -93,6 +102,13 @@ from{margin-left:-50px;opacity:.2;} to{margin-left:1px;opacity:1;}
 <br>
 <div class="contain">
 <div class="left">
+	
+	<div class="side">
+	<div id="sider" class="side1 active" onclick="clickPlay()" style="width:53px;">play</div>
+	<div id="sider1" class="side2 showing" onclick="clickAgri()" style="width:140px;">Agricultural</div>
+	<div id="sider2" class="side3" onclick="clickHard()" style="width:140px;">Hardware</div>
+	</div>
+	
 	<div id="myStyle1" class="first show">
 	<h1>Agricultural Products</h1>
 	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc.</p>
@@ -134,21 +150,44 @@ from{margin-left:-50px;opacity:.2;} to{margin-left:1px;opacity:1;}
 
 
 <script>
-var slide = 1;
+var press=0;
+function button() {
+if (press == 1){console.log("1");press=0;
+document.getElementById('navbar').classList.remove('skewadd');
+document.getElementById('navbarr').classList.remove('skewadd');
+document.getElementById('navshow').classList.remove('navshow');
+}
+else {console.log("2");press=1;
+document.getElementById('navbar').classList.add('skewadd');
+document.getElementById('navbarr').classList.add('skewadd');
+document.getElementById('navshow').classList.add('navshow');
+}
+}
 
-var timer = 3000;
+
+var slide = 1;
+var timer = 5000;
 setTimeout(function(){
 
 		document.getElementById('myStyle'+slide).classList.remove('show');
 		document.getElementById('myStyles'+slide).classList.remove('show');
+		document.getElementById('sider'+slide).classList.remove('showing');
 		slide++;
 		if(slide == 3){slide = 1;}
 		console.log('myStyles'+slide);
 		document.getElementById('myStyle'+slide).classList.add('show');
 		document.getElementById('myStyles'+slide).classList.add('show');
+		document.getElementById('sider'+slide).classList.add('showing');
+		timer = 5000;
 		
 	setTimeout(arguments.callee, timer);
 }, timer);
+
+function clickAgri() {timer = 30000; console.log("clicked agri") }
+function clickHard() {timer = 30000; console.log("clicked hard")}
+function clickPlay() {timer = 5000; console.log("clicked play")}
+
+
 
 </script>
 </body>
