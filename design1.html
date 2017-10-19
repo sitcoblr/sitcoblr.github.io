@@ -55,10 +55,20 @@ body {margin:0;font-family:Lucida Sans Unicode; letter-spacing:3px;}
 .imgcontain {padding:10px;}
 .right {height:340px;}
 }
-.first, .imgcontain {display:none; animation-name:anim; animation-duration:1s; height:auto; position:relative;}
+.first, .imgcontain {
+display:none; 
+animation-name:anim; 
+animation-duration:2.5s; 
+animation-direction: alternate;
+animation-timing-function: linear;
+height:auto; 
+position:relative;
+}
 .show {display:block;}
 @keyframes anim {
-from{left:-50px;opacity:.2;} to{left:1px;opacity:1;}
+0%{left:-50px;}
+50%{left:1px;}
+100%{left:50px;}
 }
 
 /* side menu */

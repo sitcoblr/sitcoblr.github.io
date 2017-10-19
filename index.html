@@ -28,51 +28,57 @@ body {margin:0;padding:0;background-color:#ffedde;}
 .nav {display:;  position: absolute; margin-left:-400px;overflow:hidden;transition: 1s;}
 .nav li {display:inline;}
 .nav a {background-color:#aa7a51;}
-.navshow {display:;margin-left: 40px;}
+.navshow {margin-left: 40px; width:70vw; }
 .navbar {color:#d9ae7c;}
+.nav ul {}
 }
 
 h1 {text-align:center;}
 
 /* -*-SLIDE CONTAINER-*- */
-.contain {position:relative;border:;overflow:hidden;height:450px;margin-top:20px;}
+.contain {position:relative;overflow:hidden;height:420px;}
 
-/*LEFT*/
+/* left */
+.bgleft {background-image:url("img/leftt.png");background-repeat:no-repeat; background-size:100% 100%; height:400px; width:65%; position:absolute; z-index:2; overflow:hidden;}
+.imageshow {width:;}
+.imageshow>img {height:600px; width:900px; float:left;}
 
-.containleft {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;z-index:1;}
+/* right */
+.bgright {background-image:url("img/rightt.png");background-repeat:no-repeat; background-size:100% 100%; height:400px; width:55%; position:absolute; right:0; top:20px;overflow:hidden;}
 
-.blockl {height:;width:100%;background-color:#623714;color:white ;}
-.trileft {width:0px;height:0px;background-color:transparent;
-border-top:200px solid #623714;
-border-right:100px solid transparent;
-border-bottom:200px solid transparent;
-border-left:100px solid #623714;
+.headings {display:none; color:white;
+animation-name:anim1; 
+animation-duration:3s; 
+animation-direction: alternate;
+animation-timing-function: linear;
 }
-.blockl div {width:calc(100% + 80px); overflow:hidden; float:left;transform: skew(-27deg);margin-left:-80px;}
-.blockl h1 {color:black; text-align:right;text-align:left;padding-left:30px; background-color:#d9ae7c;transform: skew(27deg); margin-left:20px; margin-right:-30px;}
-.blockl p {text-align:center; background-color:#d9ae7c; color:black;transform: skew(27deg); margin-left:60px; margin-right:-30px;}
-.blockl p:nth-child(3) { margin-left:100px; margin-right:-30px;}
-
-/*RIGHT*/
-
-.containright {width:calc(50% + 200px);padding:0;border-spacing:0;position:absolute;right:0;top:30px;}
-
-.blockr {height:;width:100%;background-color:#d9ae7c;color:white;}
-.triright {width:0px;height:0px;background-color:transparent;
-border-top:200px solid transparent;
-border-right:100px solid #d9ae7c;
-border-bottom:200px solid #d9ae7c;
-border-left:100px solid transparent;
+.imageshow {display:none;
+animation-name:anim2; 
+animation-duration:3s; 
+animation-direction: alternate;
+animation-timing-function: linear;
 }
 
-.blockr p {text-align:center;transform: skew(30deg);background-color:#623714;}
-.blockr h1 {color:; text-align:right;transform: skew(30deg);text-align:left;padding-left:30px; background-color:#623714;}
-.blockr div {transform: skew(-30deg);margin-right:-70px; width:90%; overflow:hidden; float:right;}
+.show{display:block;}
+@keyframes anim1 {
+0%{margin-left:-100px;opacity:0.1;}
+5%{opacity:.8;}
+95%{opacity:.8;}
+100%{margin-left:250px;opacity:0.1;}
+}
+@keyframes anim2 {
+0%{margin-left:-40px;margin-top:0px;opacity:.1;background-color:blue;}
+5%{opacity:0.8;}
+50%{margin-left:;}
+95%{opacity:.8;}
+100%{margin-left:30px;margin-top:-40px;opacity:0.1;}
+}
 
 @media only screen and (max-width:768px) {
-.contain {height:auto;position:static;}
-.containright {position:static;min-height:100px;width:100%;}
-.containleft {position:static;min-height:100px;width:100%;}
+.bgleft {position:static;width:100%;height:80px;}
+.headings {height:80px;}
+.bgright {position:static;width:100%;overflow:hidden;}
+.contain {height:auto;}
 }
 
 
@@ -82,8 +88,8 @@ border-left:100px solid transparent;
 /* smooth slider */
 .slider {height:200px;width:100%;overflow:hidden;position:relative;}
 .innerslide {display:flex;position:absolute;left:0px;animation-name:smoothslide;animation-duration:10s;animation-iteration-count:infinite;animation-timing-function: linear;}
-.innerslide>img {width:150px;height:150px;}
-@keyframes smoothslide{from{left:0px;}to{left:-1800px;}}
+.innerslide>img {width:125px;height:125px;}
+@keyframes smoothslide{from{left:0px;}to{left:-1500px;}} /* 12x125 */
 .innerslide:hover {animation-play-state: paused;}
 .innerslide>img:hover {height:130px;background-color:black;opacity:0.8;}
 
@@ -116,59 +122,25 @@ border-left:100px solid transparent;
 
 </ul>
 </div>
+<br>
+<div class="contain">
+<div class="bgleft">
+	<h1 id="myStyle1" class="headings show">Agricultural Products</h1>
 
-<div class="contain">  
-  
-<table class="containleft">
-<tr>
-<td class="blockl">
-<div id="sliderl1" class="slide1 show">
-	<h1>AGRICULTURAL</h1>
-	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc. </p>
+	<h1 id="myStyle2" class="headings">Hardware Products</h1>
 </div>
-<div id="sliderl2" class="slide2">
-	<h1>HARDWARE</h1>
-	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc. </p>
-</div>
-<div id="sliderl3" class="slide3">
-	<h1>AGRICULTURAL</h1>
-	<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002. Our goal is to serve our customers need with the best quality product imported from across india.<br>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli<br>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc. </p>
-</div>
-</td>
-<td class="trileft xs-hidden"></td>
-</tr>
-</table>
 
-<table class="containright">
-<tr>
-<td class="triright xs-hidden"></td>
-<td class="blockr">
-<div id="slider1" class="slide1 show">
-	<h1>PRODUCTS</h1>
-	<img src="img/IMG1.jpg" height="100px"width="100px"/>
-	<img src="img/IMG2.jpg" height="100px"width="100px"/>
-	<img src="img/IMG3.jpg" height="100px"width="100px"/>
-	<img src="img/IMG4.jpg" height="100px"width="100px"/>
+<div class="bgright">
+	<div id="myStyles1" class="imageshow show">
+	<img src="img/agriculture.jpg"/>
+	</div>
+	<div id="myStyles2" class="imageshow">
+	<img src="img/hardware.jpg"/>
+	</div>
 </div>
-<div id="slider2" class="slide2">
-	<h1>PRODUCTS</h1>
-	<img src="img/IMG5.jpg" height="100px"width="100px"/>
-	<img src="img/IMG6.jpg" height="100px"width="100px"/>
-	<img src="img/IMG7.jpg" height="100px"width="100px"/>
-	<img src="img/IMG8.jpg" height="100px"width="100px"/>
 </div>
-<div id="slider3" class="slide3">
-	<h1>PRODUCTS</h1>
-	<img src="img/IMG9.jpg" height="100px"width="100px"/>
-	<img src="img/IMG10.jpg" height="100px"width="100px"/>
-	<img src="img/IMG11.jpg" height="100px"width="100px"/>
-	<img src="img/IMG12.jpg" height="100px"width="100px"/>
-</div>
-</td>
-</tr>
-</table>
+<br>
 
-</div>
 <div class="slider">
     <div id="inner" class="innerslide">
 	<img src="img/IMG1.jpg"/>
@@ -219,16 +191,18 @@ var slide = 1;
 var timer = 3000;
 setTimeout(function(){
 
-		document.getElementById('slider'+slide).classList.remove('show');
-		document.getElementById('sliderl'+slide).classList.remove('show');
+		document.getElementById('myStyle'+slide).classList.remove('show');
+		document.getElementById('myStyles'+slide).classList.remove('show');
 		slide++;
-		if(slide == 4){slide = 1;}
-		console.log(slide);
-		document.getElementById('slider'+slide).classList.add('show');
-		document.getElementById('sliderl'+slide).classList.add('show');
+		if(slide == 3){slide = 1;}
+		console.log('myStyles'+slide);
+		document.getElementById('myStyle'+slide).classList.add('show');
+		document.getElementById('myStyles'+slide).classList.add('show');
+		
 		
 	setTimeout(arguments.callee, timer);
 }, timer);
+
 
 
 
