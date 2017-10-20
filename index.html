@@ -67,18 +67,21 @@ animation-timing-function: linear;
 100%{margin-left:250px;opacity:0.1;}
 }
 @keyframes anim2 {
-0%{margin-left:-40px;margin-top:0px;opacity:.1;background-color:blue;}
-5%{opacity:0.8;}
+0%{margin-left:-70px;margin-top:0px;opacity:0.5;background-color:blue;}
+5%{opacity:1;}
 50%{margin-left:;}
-95%{opacity:.8;}
-100%{margin-left:30px;margin-top:-40px;opacity:0.1;}
+95%{opacity:1;}
+100%{margin-left:0px;margin-top:-40px;opacity:0.3;}
 }
 
 @media only screen and (max-width:768px) {
-.bgleft {position:static;width:100%;height:80px;}
-.headings {height:80px;}
-.bgright {position:static;width:100%;overflow:hidden;}
+.bgleft {position:absolute;width:100%;height:80px;}
+.headings {white-space: nowrap ;}
+.bgright {position:relative;width:100%;overflow:hidden;}
 .contain {height:auto;}
+.bgleft {background-image:url("	");}
+.bgright {background-image:url("");}
+.headings {color:black;}
 }
 
 
@@ -93,6 +96,9 @@ animation-timing-function: linear;
 .innerslide:hover {animation-play-state: paused;}
 .innerslide>img:hover {height:130px;background-color:black;opacity:0.8;}
 
+.about {background-color:grey;}
+.about h2 {color:white; font-size:30px; text-align:center;}
+.about p {color:white; font-size:20px; padding:5px 50px 5px 50px;}
 
 </style>
 
@@ -140,6 +146,14 @@ animation-timing-function: linear;
 </div>
 </div>
 <br>
+
+<div class="about">
+<h2>About Us</h2>
+<p>We are the wholesaler of all agricultural tools and hardware material, located at SP Road, City Market, Bangalore 560 002.
+Our goal is to serve our customers need with the best quality product imported from across india.</p>
+<p>Our hardware products are Nails, GI wires, Mesh, Agricultural tools, Hammer, Bandli</p>
+<p>Our Agricultural tools includes Grubbing Axe, Flat Tined Digging Fork, Wooden Float, Grass Hook, Shovel, Hoe, Spade, Rakes, Hand fork, Wheelbarrow etc.</p>
+</div>
 
 <div class="slider">
     <div id="inner" class="innerslide">
